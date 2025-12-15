@@ -1,0 +1,33 @@
+### GET /
+GET http://localhost:5858
+
+### POST signup a user
+POST http://localhost:5858/auth/register
+Content-Type: application/json
+
+{
+  "username":"test_user",
+  "password":"Qwerty123$"
+}
+
+### POST login a user
+POST http://localhost:5858/auth/login
+Content-Type: application/json
+
+{
+  "username":"test_user",
+  "password":"Qwerty123$"
+}
+
+### Fetch all todos GET /TODOS (protected)
+GET http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODE1ODA1LCJleHAiOjE3NjU5MDIyMDV9._3FeT1UMffOvWb95o2m226i7V9ZqL9tvAFwhtx4Bg90
+
+### Creates a new todoPOST /TODOS (protected)
+POST http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODE1ODA1LCJleHAiOjE3NjU5MDIyMDV9._3FeT1UMffOvWb95o2m226i7V9ZqL9tvAFwhtx4Bg90
+Content-Type: application/json
+
+{
+  "task": "Finish coding the projects"
+}
