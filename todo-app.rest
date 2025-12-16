@@ -20,14 +20,27 @@ Content-Type: application/json
 }
 
 ### Fetch all todos GET /TODOS (protected)
-GET http://localhost:5003/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODE1ODA1LCJleHAiOjE3NjU5MDIyMDV9._3FeT1UMffOvWb95o2m226i7V9ZqL9tvAFwhtx4Bg90
-
-### Creates a new todoPOST /TODOS (protected)
-POST http://localhost:5003/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODE1ODA1LCJleHAiOjE3NjU5MDIyMDV9._3FeT1UMffOvWb95o2m226i7V9ZqL9tvAFwhtx4Bg90
+GET http://localhost:5858/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODk3NDg5LCJleHAiOjE3NjU5ODM4ODl9.lOBxAMMG4wdVyEcNECnOrTnpgUKnkNaHzJplKf842l8
+### Creates a new todo POST /TODOS (protected)
+POST http://localhost:5858/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODk3NDg5LCJleHAiOjE3NjU5ODM4ODl9.lOBxAMMG4wdVyEcNECnOrTnpgUKnkNaHzJplKf842l8
 Content-Type: application/json
 
 {
-  "task": "Finish coding the projects"
+  "task": "Finish main project"
 }
+
+### Update a todo PUT /TODOS/:ID (protected)
+PUT http://localhost:5858/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODk3NDg5LCJleHAiOjE3NjU5ODM4ODl9.lOBxAMMG4wdVyEcNECnOrTnpgUKnkNaHzJplKf842l8
+Content-Type: application/json
+
+{
+  "completed": 1
+}
+
+### Delete a todo DELETE /TODOS/:ID (protected)
+DELETE http://localhost:5858/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODk3NDg5LCJleHAiOjE3NjU5ODM4ODl9.lOBxAMMG4wdVyEcNECnOrTnpgUKnkNaHzJplKf842l8
+Content-Type: application/json
